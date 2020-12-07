@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>B24 - Passbook</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  </head>
+  <!-- Компании -->
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__content">
+          <button class="burger-button" id="burgerBtn">
+            <i class="mdi mdi-menu size-24"></i>
+          </button>
+          <h1 class="header__title page__title text-truncate">Компании</h1>
+          <!-- Date / time -->
+          <div class="date-time-widget text-truncate mr-3">
+            <i class="mdi mdi-clock-time-three-outline size-24 mr-1" aria-hidden></i>
+            <span class="mr-1">14:39</span>
+            <span class="mr-1">Чт</span>
+            /
+            <span class="ml-1">14.06</span>
+          </div>
+          <!-- Full-screen button -->
+          <button class="toolbar-button full-screen-btn color-toolbar-btn" id="fullScreenBtn">
+            <i class="mdi mdi-arrow-expand size-24 initial-screen-icon"></i>
+            <i class="mdi mdi-arrow-collapse size-24 full-screen-icon d-none"></i>
+          </button>
+          <!-- Notifications -->
+          <div class="nav-item dropdown notifications-dropdown">
+            <a
+              class="nav-link dropdown-toggle toolbar-button pt-1"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="mdi mdi-bell-outline color-toolbar-btn size-24" aria-hidden></i>
+              <span class="badge-info pos-absolute" aria-hidden>3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Сообщение 1</a>
+              <a class="dropdown-item" href="#">Сообщение 2</a>
+              <a class="dropdown-item" href="#">Сообщение 3</a>
+            </div>
+          </div>
+          <!-- Language -->
+          <div class="nav-item dropdown language-dropdown">
+            <a
+              class="nav-link dropdown-toggle toolbar-button"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img src="img/lang/rus.svg" width="18" class="active-lang">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item flag-item active" href="#" data-lang="rus">
+                <img src="img/lang/rus.svg" width="18" class="mr-2">
+                Русский
+              </a>
+              <a class="dropdown-item flag-item" href="#" data-lang="ukr">
+                <img src="img/lang/ukr.svg" width="18" class="mr-2">
+                Украинский
+              </a>
+              <a class="dropdown-item flag-item" href="#" data-lang="eng">
+                <img src="img/lang/eng.svg" width="18" class="mr-2">
+                Английский
+              </a>
+            </div>
+          </div>
+          <!-- User dropdown menu -->
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle toolbar-button toolbar-button--account"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="mdi mdi-account-circle size-30 account-icon" aria-hidden></i>
+              <i class="mdi mdi-menu-down size-24" aria-hidden></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <div class="dropdown__title px-3 py-2">
+                <div>Дмитрий</div>
+                <div class="dropdown__title--mail pt-1">dmitriy@rems.company</div>
+              </div>
+              <div class="dropdown-divider my-0"></div>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-account-outline size-18 mr-2" aria-hidden></i>
+                Профиль пользователя
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-swap-horizontal size-18 mr-2" aria-hidden=""></i>
+                Сменить пароль
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-account-box-outline size-18 mr-2" aria-hidden=""></i>
+                Профиль компании
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-api size-18 mr-2" aria-hidden=""></i>
+                API ключ
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-exit-to-app size-18 mr-2" aria-hidden=""></i>
+                Выход
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo__wrap">
+            <a href="">
+              <img src="./img/sidebar/logo.svg" width="110" class="logo__img">
+            </a>
+          </div>
+        </div>
+        <nav class="sidebar__nav navigation">
+          <ul class="navigation__list">
+            <!-- Главная панель -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-view-agenda-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Главная панель</span>
+              </a>
+            </li>
+            <!-- Компании -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate active">
+                <i class="mdi mdi-city-variant-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Компании</span>
+              </a>
+            </li>
+            <!-- Пользователи -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-account-supervisor-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Пользователи</span>
+              </a>
+            </li>
+            <!-- Дизайны -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-wallpaper size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Дизайны</span>
+              </a>
+            </li>
+            <!-- Карты -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-cards-variant size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Карты</span>
+              </a>
+            </li>
+            <!-- Визитки -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-smart-card-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Визитки</span>
+              </a>
+            </li>
+            <!-- Шаблон листовки -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-bookmark-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Шаблон листовки</span>
+              </a>
+            </li>
+            <!-- Формы -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-format-align-right size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Формы</span>
+              </a>
+            </li>
+            <!-- Сертификаты -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-alpha-c-circle-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Сертификаты</span>
+              </a>
+            </li>
+            <!-- Рассылки -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-file-send-outline size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">Рассылки</span>
+              </a>
+            </li>
+            <!-- API-ключ -->
+            <li class="navigation__item">
+              <a href="#" class="navigation__link text-truncate">
+                <i class="mdi mdi-api size-18 mr-2" aria-hidden></i>
+                <span class="navigation__text">API-ключ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="content">
+        <div class="content__wrap">
+          <div class="card card__wrap">
+            <div class="card card__inner">
+              <div class="card__row">
+                <!-- Открыть расширенный поиск -->
+                <button type="button" class="custom-button search-open-btn d-flex align-items-center">
+                  <i class="search-icon mr-1" aria-hidden></i>
+                  Поиск
+                </button>
+                <!-- /Открыть расширенный поиск -->
+              </div>
+              <!-- Расширенный поиск -->
+              <div class="card__row extended-search py-5 d-none">
+                <form class="d-inline-block">
+                  <!-- Имя дизайна -->
+                  <div class="form-group d-flex align-items-sm-center flex-column flex-sm-row">
+                    <label for="companyName" class="form-group__label text-truncate text-left text-sm-right mb-sm-0">Компания</label>
+                    <input class="form-control form-control__input" id="companyName">
+                  </div>
+                  <!-- Дата Создания -->
+                  <div class="form-group d-flex align-items-start align-items-sm-center flex-column flex-sm-row">
+                    <label for="companyName" class="form-group__label text-truncate text-left text-sm-right mb-sm-0">Дата создания</label>
+                    <div class="drp-input-wrap">
+                      <span class="mdi mdi-calendar-blank-outline prepend-icon size-18" aria-hidden="true"></span>
+                      <input
+                        class="form-control form-control__input px-7 size-12 text-center"
+                        type="text"
+                        name="daterange"
+                        value=""
+                        id="daterange"
+                      >
+                      <span class="mdi mdi-chevron-down append-icon size-20" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <!-- Искать -->
+                  <div class="form-group d-flex align-items-center mb-0">
+                    <button type="button" class="custom-button btn-blue mt-1 px-3">Искать</button>
+                  </div>
+                </form>
+              </div>
+              <!-- /Расширенный поиск -->
+              <div class="card__row">
+                <span class="font-weight-bold">Всего: 150</span>
+                <!-- Вызов модалки -->
+                <button
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#addCompanyModal"
+                  class="custom-button custom-button--smaller btn-green my-1 px-3 ml-auto"
+                >
+                  Добавить
+                </button>
+                <!-- /Вызов модалки -->
+              </div>
+              <!-- Таблица -->
+              <div class="table__wrap">
+                <table class="table__data">
+                  <!-- Заголовки -->
+                  <thead>
+                    <tr>
+                      <th class="text-center px-3">№</th>
+                      <th class="sorted-column">
+                        <span class="d-flex align-items-center">
+                          Имя компании
+                          <span class="sort-btn">
+                            <i class="mdi mdi-arrow-up sort-btn__icon icon-unsorted" aria-hidden></i>
+                            <i class="mdi mdi-arrow-down sort-btn__icon icon-sorted" aria-hidden></i>
+                          </span>
+                        </span>
+                      </th>
+                      <th>Дата создания</th>
+                      <th class="text-center">Пробный период</th>
+                      <th class="text-center">Финансовая блокировка</th>
+                    </tr>
+                  </thead>
+                  <!-- Строки -->
+                  <tbody>
+                    <tr>
+                      <!-- № -->
+                      <td class="text-center">1</td>
+                      <!-- Company Name -->
+                      <td>
+                        <a href="#" class="table__link text-underline">Ремс</a>
+                      </td>
+                      <!-- Date -->
+                      <td>
+                        <span class="mr-1">10.02.2020</span>
+                        <span>13:39:15</span>
+                      </td>
+                      <!-- Trial -->
+                      <td class="text-center">
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" checked>
+                          <label class="custom-control-label"></label>
+                        </div>
+                      </td>
+                      <!-- Finance block -->
+                      <td class="text-center">
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" checked>
+                          <label class="custom-control-label"></label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>
+                        <a href="#" class="table__link text-underline">Ремс-партнёр</a>
+                      </td>
+                      <td>
+                        <span class="mr-1">10.02.2020</span>
+                        <span>13:39:15</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <label class="custom-control-label"></label>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <label class="custom-control-label"></label>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /Таблица -->
+              <div class="card__row border-none">
+                <p class="mb-0">
+                  <span>1</span>
+                  из
+                  <span>150</span>
+                </p>
+                <!-- Пагинация под таблицей-->
+                <ul class="mx-auto my-0 pagination">
+                  <li class="page-item prev-next disabled">
+                    <a class="page-link" href="#">
+                      <i class="mdi mdi-chevron-left size-24" aria-hidden></i>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item prev-next">
+                    <a class="page-link" href="#">
+                      <i class="mdi mdi-chevron-right size-24" aria-hidden></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- /Пагинация -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Modal Add Design -->
+    <div
+      class="modal fade"
+      id="addDesignModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!-- Modal Title -->
+          <div class="modal-header">
+            <h3 class="modal-title">Добавить дизайн</h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="mdi mdi-close" aria-hidden></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group d-flex flex-column">
+                <label for="sertifName" class="modal-label">
+                  Имя сертификата:
+                </label>
+                <select class="form-control form-control__input w-100" id="sertifName">
+                  <option>РЕМС</option>
+                  <option>Ремс маркет</option>
+                  <option>Маркет</option>
+                </select>
+              </div>
+              <div class="form-group d-flex flex-column">
+                <label for="desigName" class="modal-label">
+                  Имя дизайна:
+                </label>
+                <input class="form-control form-control__input w-100" id="desigName">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button data-dismiss="modal" type="button" class="custom-button btn-blue px-3 py-2 size-14">
+              Добавить дизайн
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal Add Design -->
+    <!-- Modal Add Company -->
+    <div
+      class="modal fade"
+      id="addCompanyModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!-- Modal Title -->
+          <div class="modal-header">
+            <h3 class="modal-title">Добавить компанию</h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="mdi mdi-close" aria-hidden></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group d-flex flex-column">
+                <label for="companyName1" class="modal-label">
+                  Наименование компании:
+                </label>
+                <input class="form-control form-control__input w-100" id="companyName1">
+              </div>
+              <div class="form-group d-flex flex-column">
+                <label for="companyEmail" class="modal-label">
+                  Email:
+                </label>
+                <input class="form-control form-control__input w-100" id="companyEmail">
+              </div>
+              <div class="form-group d-flex flex-column">
+                <label for="provaiderName" class="modal-label">
+                  SMS провайдер:
+                </label>
+                <select class="form-control form-control__input w-100" id="provaiderName">
+                  <option disabled selected hidden>Выберите оператора</option>
+                  <option>TURBO SMS</option>
+                  <option>mobipace.com</option>
+                  <option>nikita.am</option>
+                </select>
+              </div>
+              <div class="form-check form-check-inline mb-5">
+                <label class="form-check-label modal-label mr-3 pointer" for="inlineCheckbox1">Пробный период</label>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="inlineCheckbox1"
+                  value="option1"
+                  checked
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button data-dismiss="modal" type="button" class="custom-button custom-button--outline px-3 py-2 size-14">Отменить</button>
+            <button data-dismiss="modal" type="button" class="custom-button btn-blue px-3 py-2 size-14">Добавить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal Add Company -->
+  </body>
+</html>
